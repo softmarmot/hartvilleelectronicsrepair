@@ -16,7 +16,7 @@ const year = new Date().getFullYear()
 <template>
   <footer id="footer">
     <div class="mx-auto max-w-6xl px-6 py-12">
-      <h1 class="text-4xl text-center">Contacts</h1>
+      <h2 class="text-4xl text-center">Contacts</h2>
       <div class="grid gap-6 md:gap-10 md:grid-cols-2">
         <div class="mt-8 flex flex-col gap-y-4">
           <div class="space-y-4 text-zinc-300">
