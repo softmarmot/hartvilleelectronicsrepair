@@ -1,13 +1,12 @@
 import './assets/main.css'
 
-import { createApp } from 'vue'
+import { createSSRApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-import 'material-symbols/outlined.css'
-
-const app = createApp(App)
+// createSSRApp hydrates the HTML prerendered at build time instead of re-creating it
+const app = createSSRApp(App)
 
 app.use(router)
 
-app.mount('#app')
+router.isReady().then(() => app.mount('#app'))

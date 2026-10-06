@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TheHeader from "@/components/TheHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import {business} from "@/data/business";
 </script>
 
 <template>
@@ -11,12 +12,12 @@ import TheFooter from "@/components/TheFooter.vue";
       <RouterView />
 
       <TheFooter
-        hours="Mon–Sat • 9:00 AM – 8:00 PM"
-        phone="(330) 958-3587"
-        phoneHref="tel:+13309583587"
-        email="hartvilleelectronicsrepair@gmail.com"
-        emailHref="mailto:hartvilleelectronicsrepair@gmail.com"
-        serviceArea="Hartville, OH + surrounding areas"
+        :hours="business.hours"
+        :phone="business.phone"
+        :phoneHref="`tel:${business.phoneE164}`"
+        :email="business.email"
+        :emailHref="`mailto:${business.email}`"
+        :serviceArea="business.serviceArea"
       />
     </main>
   </div>

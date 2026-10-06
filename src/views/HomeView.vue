@@ -8,8 +8,8 @@ import TheFaqItem from "@/components/TheFaqItem.vue";
 import {faqItems} from "@/data/faq";
 import {serviceCards} from '@/data/services'
 import {benefits} from "@/data/benefits";
-import bgV from '@/assets/repair-service-_v_.jpg'
-import bgH from '@/assets/repair-service-_h_.jpg'
+import bgV from '@/assets/repair-service-_v_.webp'
+import bgH from '@/assets/repair-service-_h_.webp'
 
 const openIndex = ref<number | null>(null)
 
@@ -29,10 +29,10 @@ const lgSpanClass = (i: number) => {
            class="absolute inset-0 bg-cover bg-center hidden md:block" />
 
       <div class="relative flex flex-col items-center md:items-start p-6 md:p-12">
-        <div class="flex flex-col mb-4">
-          <h2 class="text-left text-6xl text-gray-800">Electronics Repair</h2>
-          <p class="text-right text-gray-800 text-xl -mt-2">Hartville</p>
-        </div>
+        <h1 class="flex flex-col mb-4">
+          <span class="text-left text-6xl text-gray-800">Electronics Repair</span>
+          <span class="text-right text-gray-800 text-xl -mt-2">Hartville</span>
+        </h1>
 
         <p class="max-w-2xl text-center md:text-left md:w-2/5 leading-8 text-gray-700">
           Professional repair of smartphones, tablets, laptops, gaming consoles, and other
@@ -42,7 +42,7 @@ const lgSpanClass = (i: number) => {
     </section>
 
     <section id="services" class="scroll-mt-18 p-6">
-      <h1 class="text-4xl text-center">Our Services</h1>
+      <h2 class="text-4xl text-center">Our Services</h2>
 
       <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <TheCard

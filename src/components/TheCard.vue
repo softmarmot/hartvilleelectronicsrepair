@@ -11,7 +11,7 @@ const props = defineProps<CardProps>();
 const bgStyle = computed(() => {
   if (!props.backgroundImg) return {};
   return {
-    backgroundImage: `url(${new URL(props.backgroundImg, import.meta.url).href})`,
+    backgroundImage: `url(${props.backgroundImg})`,
   };
 });
 </script>
@@ -22,7 +22,7 @@ const bgStyle = computed(() => {
       :style="bgStyle"
       class="card-header relative overflow-hidden rounded-2xl w-full h-64 bg-cover bg-center flex flex-col justify-end">
       <div v-if="props.title" class="w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 pt-12">
-        <h4 class="font-normal tracking-wide text-shadow-xs">{{ props.title }}</h4>
+        <h3 class="font-normal tracking-wide text-shadow-xs">{{ props.title }}</h3>
       </div>
     </div>
     <div class="card-content mt-4">
