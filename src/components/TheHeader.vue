@@ -18,8 +18,10 @@ const goTo = async (id: string) => {
 <template>
   <header
     class="fixed top-0 left-0 w-screen z-50 px-4 bg-zinc-900 text-zinc-300 border-b border-b-zinc-700 md:flex py-2 md:py-0">
-    <div class="flex grid-cols-2">
-      <img alt="Hartville Electronics Repair Logo" class="h-14 w-auto my-auto" src="@/assets/logo.webp" width="584" height="130">
+    <div class="flex grid-cols-2 md:shrink-0">
+      <a class="my-auto shrink-0" href="#home" aria-label="Hartville Electronics Repair, back to top" @click.prevent="goTo('home')">
+        <img alt="Hartville Electronics Repair Logo" class="h-14 w-auto" src="@/assets/logo.svg" width="380" height="100">
+      </a>
       <div class="w-full flex justify-end">
         <button class="md:hidden mr-2" aria-label="Menu" :aria-expanded="menuExpanded" @click="menuExpanded = !menuExpanded">
           <svg aria-hidden="true" class="w-8 h-8" fill="none" viewBox="0 0 17 14"

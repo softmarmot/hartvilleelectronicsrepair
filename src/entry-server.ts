@@ -25,7 +25,7 @@ function localBusinessJsonLd() {
     url: business.url,
     telephone: business.phoneE164,
     email: business.email,
-    logo: `${business.url}og-image.jpg`,
+    logo: `${business.url}logo.png`,
     image: `${business.url}og-image.jpg`,
     description:
       'Mobile repair service for smartphones, tablets, laptops, gaming consoles and other electronics in Hartville, OH and surrounding areas.',
