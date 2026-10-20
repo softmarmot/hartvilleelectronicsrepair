@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TheHeader from "@/components/TheHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import TheCallButton from "@/components/TheCallButton.vue";
 import {business} from "@/data/business";
 </script>
 
@@ -8,7 +9,7 @@ import {business} from "@/data/business";
   <div class="h-screen flex flex-col bg-zinc-900">
     <TheHeader />
 
-    <main class="pt-[80px] bg-zinc-800 font-extralight text-white">
+    <main class="pt-[80px] pb-20 md:pb-0 bg-zinc-800 font-extralight text-white">
       <RouterView />
 
       <TheFooter
@@ -20,5 +21,7 @@ import {business} from "@/data/business";
         :serviceArea="business.serviceArea"
       />
     </main>
+
+    <TheCallButton :phone="business.phone" :phoneHref="`tel:${business.phoneE164}`" />
   </div>
 </template>
